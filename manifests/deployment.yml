@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: huynhquochuypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: huynhquochuypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: huynhquochuypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: huynhquochuypipelinesjavascriptdocker 
+          image: hktchub.azurecr.io/huynhquochuypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
